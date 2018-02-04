@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    font: italic 4em serif;
+    color: #888;
+}
+
+#gen-btn {
+    padding: 16px 24px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #FFF;
+    color: #444;
+    font-size: 1em;
+    transition: background-color 0.1s ease-out;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#gen-btn:focus {
+    outline: none;
+    border-color: #06C;
+}
+
+#gen-btn:hover {
+    background-color: #EEE;
+}
+
+#gen-btn:active {
+    background-color: #CCC;
+}
+
+.loading #gen-btn {
+    display: none;
+}

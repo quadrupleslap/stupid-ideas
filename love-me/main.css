@@ -1,0 +1,29 @@
+html, body {
+    height: 100%; width: 100%;
+    font-family: 'Joti One', cursive;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #FF0000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.invert {
+    color: #000000;
+    background-color: #FF0000;
+}
+
+#instr {
+    position: fixed;
+    right: 4px;
+    bottom: 4px;
+}
+
+#time {
+    font-size: 12vw;
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Word Generator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="loading">
+    <h1 id="result">Word Generator</h1>
+    <button id="gen-btn">Generate</button>
+    <script src="markov.js"></script>
+    <script>
+        function init(text) {
+            let builder = new Markov.Builder();
+
+            text.split('\n').forEach(word => {
+                builder.add(word.split('•'));
+            });
+
+            let chain = builder.build();
+
+            let button = document.getElementById('gen-btn');
+            let result = document.getElementById('result');
+
+            button.onclick = () => {
+                let word;
+
+                do {
+                    word = chain.walk();
+                } while (word.length > 5);
+
+                result.textContent = word.join('⋅');
+            };
+
+            document.body.classList.remove('loading');
+        }
+
+        fetch('mhyph.txt').then(res => res.text()).then(init);
+    </script>
+</body>
+</html>
