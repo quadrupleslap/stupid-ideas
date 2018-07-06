@@ -1,0 +1,52 @@
+body {
+    max-width: 960px;
+    margin: 2em auto;
+    padding: 0 1em;
+    line-height: 1.6;
+    font: 18px sans-serif;
+    color: #CCC;
+    background-color: #111;
+}
+
+#input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid currentColor;
+    padding: 1em;
+}
+
+#output {
+    margin: 1em 0;
+    max-width: 100%;
+    overflow: auto;
+}
+
+#output table {
+    border-collapse: collapse;
+}
+
+#output th {
+    padding: 0.5em 1em;
+    background-color: #CCC;
+    color: #111;
+}
+
+#output td {
+    height: 2em;
+}
+
+#output td.true {
+    background-color: #1F1;
+}
+
+#output td.false {
+    background-color: #F11;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Truth Tables</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Truth Table Generator</h1>
+    <ul>
+        <li><strong>AND</strong> 🡒 Conjunction</li>
+        <li><strong>OR</strong> 🡒 Disjunction</li>
+        <li><strong>NOT</strong> 🡒 Negation</li>
+        <li><strong>XOR</strong> 🡒 Exclusive Disjunction</li>
+        <li><strong>IMPLIES</strong> 🡒 Implication</li>
+    </ul>
+    <textarea id="input"
+              placeholder="Your expressions, each on a separate line."
+              oninput="update()"
+              autofocus></textarea>
+    <div id="output"></div>
+</body>
+</html>
