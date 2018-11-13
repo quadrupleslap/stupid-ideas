@@ -1,10 +1,12 @@
-(async function () {
+stat.onclick = async function () {
+
+delete stat.onclick;
+stat.textContent = 'Loading…';
 
 try {
-    let audio = document.createElement('audio');
+    let context = new AudioContext();
+    let audio = new Audio();
     let outputs = document.createElement('select');
-
-    stat.textContent = 'Loading…';
 
     // Load the list of output devices.
 
@@ -32,14 +34,16 @@ try {
 
     // Play the input stream to the selected output device.
 
-    audio.srcObject = stream;
-    audio.onloadedmetadata = e => {
-        audio.play();
-        stat.textContent = 'Looping!';
-    };
+    let source = context.createMediaStreamSource(stream);
+    let sink = context.createMediaStreamDestination();
+    source.connect(sink);
+
+    audio.srcObject = sink.stream;
+    audio.play();
+    stat.textContent = 'Looping!';
 } catch (e) {
     stat.textContent = 'Failed.';
     console.error(e);
 }
 
-})();
+};
