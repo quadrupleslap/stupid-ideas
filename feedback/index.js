@@ -30,7 +30,13 @@ try {
 
     // Load the input stream.
 
-    let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    let stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+            autoGainControl: false,
+            echoCancellation: true,
+            noiseSuppression: false
+        }
+    });
 
     // Play the input stream to the selected output device.
 
