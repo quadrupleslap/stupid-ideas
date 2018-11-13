@@ -1,6 +1,6 @@
 stat.onclick = async function () {
 
-delete stat.onclick;
+stat.onclick = null;
 stat.textContent = 'Loading…';
 
 try {
