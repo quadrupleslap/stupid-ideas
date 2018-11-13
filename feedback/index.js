@@ -34,7 +34,7 @@ try {
         audio: {
             autoGainControl: false,
             echoCancellation: true,
-            noiseSuppression: false
+            noiseSuppression: true
         }
     });
 
