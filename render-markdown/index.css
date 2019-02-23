@@ -1,0 +1,70 @@
+/* LAYOUT */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+@media screen {
+    body {
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    #editor, #render {
+        flex: 0.5;
+        overflow: auto;
+    }
+
+    #render {
+        padding: 0 1em;
+    }
+}
+
+@media print {
+    #editor {
+        display: none;
+    }
+}
+
+/* MARKDOWN STYLES */
+
+#render {
+    font-family: 'Roboto Slab', serif;
+    color: #222;
+}
+
+#render pre {
+    border-radius: 4px;
+}
+
+#render table {
+    border-collapse: collapse;
+}
+
+#render td, #render th {
+    padding: .5em 1em;
+    border: 1px solid #CCC;
+}
+
+#render a {
+    color: #08F;
+    text-decoration: none;
+}
+
+#render a:hover {
+    text-decoration: underline;
+}
+
+#render a:active {
+    color: #00F;
+}
+
+#render blockquote {
+    display: inline-block;
+    border-left: 4px solid #CCC;
+    margin: auto 0;
+    padding: 0 1em;
+}
