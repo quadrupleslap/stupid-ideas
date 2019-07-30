@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noose</title>
+
+<style>
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    transform-origin: bottom;
+    transform: perspective(32px) rotateX(15deg);
+    background: black;
+}
+
+body::before {
+    content:' ';
+    display: block;
+    height: 100%;
+    background: white url('noose.jpg') repeat;
+    animation: scrolling 1.5s linear infinite;
+    filter: invert(1);
+}
+
+@keyframes scrolling {
+    from { background-position: 0      0     ; }
+    to   { background-position: -260px 830px ; }
+}
+</style>
+
+<!--
+This Wikipedia and Wikimedia Commons image is from the user Chris 73 and is freely available at
+https://commons.wikimedia.org/wiki/File:Hangmans_Noose.jpg under CC-BY-SA 3.0.
+-->
